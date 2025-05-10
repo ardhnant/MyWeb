@@ -1,0 +1,149 @@
+
+  .subscribe{
+    border: none;
+    display: inline-block; 
+    background-color: rgb(200, 0, 0);
+    height: 36px;
+    width: 100px;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    margin-right: 18px;
+    margin-left: 0px;
+    transition: opacity 0.15s;
+  }
+  .subscribe:hover{
+    opacity: 0.7;
+ }
+ .subscribe:active{
+    opacity: 0.4;
+ }
+  .join{
+    border: solid;
+    display: inline-block; 
+    background-color: white;
+    color: rgb(29, 113, 231);
+    border-color: rgb(29, 113, 231);
+    height: 36px;
+    width: 64px;
+    border-radius: 4px;
+    margin-right: 18px;
+    cursor: pointer;
+    transition: background-color 0.15s, color 0.15s;
+  }
+  .join:hover{
+    background-color: rgb(29, 113, 231);
+    color: white;
+  }
+  .join:active{
+    opacity: 0.7;
+  }
+  .tweet{
+    background-color: rgb(29, 113, 231);
+    border: none;
+    height: 36px;
+    width: 72px;
+    color: white;
+    font-weight: bold;
+    border-radius: 18px;
+    margin-right: 18px;
+    cursor: pointer;
+    transition: box-shadow 0.015s;
+    box-shadow: 3px 4px 5px rgba(29, 113, 231, 0.15);
+  }
+  .tweet:active{
+    box-shadow: 3px 4px 5px rgba(29, 113, 231, 0.5);
+  }
+  .nike{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  .stock{
+    color: rgb(0, 118, 0);
+  }
+  .add{
+    border: none;
+    background-color: rgb(255, 216, 20);
+    height: 34px;
+    width: 120px;
+    border-radius: 17px;
+    margin-right: 18px;
+    cursor: pointer;
+  }
+  .add:active{
+    box-shadow: 3px 4px 5px rgba(255, 216, 20, 0.5);
+  }  
+    .buy{
+      border: none;
+    background-color: rgb(255, 164, 28);
+    height: 34px;
+    width: 120px;
+    border-radius: 17px;
+    margin-right: 18px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .buy:hover{
+    opacity: 0.7;
+ }
+ .buy:active{
+    opacity: 0.4;
+ }
+ .opinion{
+  text-align: center;
+  font-weight: bold;
+  font-family: monospace;
+ }
+ .phagination1{
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+ }
+ .stretch{
+  border: solid;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: green;
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: width .15s, height .15s;
+ }
+ .stretch:hover{
+  width: 150px;
+  height: 80px;
+ }
+ .dclick{
+  border: solid;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: green;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: margin-left .15s, margin-top .15s;
+ }
+ .dclick:hover{
+  margin-left: 22px;
+  margin-top: 22px;
+ }
+ hr {
+  border: none;
+  border-top: 3px dotted rgb(0, 0, 0);
+  color: #000000;
+  background-color: #ffffff;
+  height: px;
+  width: 100%;
+}
+

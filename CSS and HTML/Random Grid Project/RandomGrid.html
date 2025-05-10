@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Facebook | Friend List</title>
+
+  <style>
+
+    body{
+      font-family: roboto;
+    }
+
+    .main-div{
+      display: grid;
+      grid-template-columns: 244px 254px 244px;
+      border: rgb(134, 19, 19);
+    }
+
+    .sub-main-div{
+      background-color: rgb(255, 255, 255);
+      margin-left: 40px;
+      border: solid rgba(96, 96, 96, .24);
+      box-shadow: 0px 1px 6px  rgba(32, 32, 36, .28);
+      margin-top: 100px;
+    }
+
+    .image{
+      height: 200px;
+      display: block;
+      margin-bottom: 0px;
+    }
+
+    .name{
+      margin-top: 5px;
+      font-weight: 500;
+      margin-bottom: 0px;
+      margin-left: 8px;
+    }
+
+    .friend-pfp {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-top: 10px;
+      margin-left: 8px;
+    }
+
+    .mutual-friend {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 8px;
+      font-size: 14px;
+      margin-top: 10px; /* optional tweak */
+      color: rgb(96, 96, 96);
+    }
+
+    button{
+      border: none;
+      margin-top: 14px;
+      margin-left: 8px;
+      margin-bottom: 10px;
+      height: 36px;
+      width: 110px;
+      background-color: rgb(24, 119, 242);
+      color: white;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body> 
+
+ <div class="main-div">
+
+  <!-- First card -->
+  <div class="sub-main-div">
+    <div>
+      <img src="cat.jpg" class="image">
+      <p class="name">Oliver</p>
+      <div class="img-text">
+        <img src="dog1.jpg" class="friend-pfp">
+        <span class="mutual-friend">2 mutual friends</span>
+      </div>
+      <div class="button-container">
+        <button class="button">Add Friend</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second card -->
+  <div class="sub-main-div">
+    <div>
+      <img src="dog2.jpg" class="image">
+      <p class="name">Mimi</p>
+      <div class="img-text">
+        <img src="dog1.jpg" class="friend-pfp">
+        <span class="mutual-friend">3 mutual friends</span>
+      </div>
+      <div class="button-container">
+        <button class="button">Add Friend</button>
+      </div>
+    </div>
+  </div>
+
+   <!-- Third card -->
+  <div class="sub-main-div">
+    <div>
+      <img src="dog3.jpg" class="image">
+      <p class="name">Rex</p>
+      <div class="img-text">
+        <img src="dog1.jpg" class="friend-pfp">
+        <span class="mutual-friend">4 mutual friends</span>
+      </div>
+      <div class="button-container">
+        <button class="button">Add Friend</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+  
+</body>
+</html>

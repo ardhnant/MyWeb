@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegapunk</title>
+
+    <style>
+        body{
+            font-family: monospace;
+        }
+        table{
+            width: 100%;
+        }
+
+        .system-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+        }
+        .hr1, .hr2{
+            border-top: 1px dashed black;
+        }
+        .hr2{
+            text-align: center;
+        }
+        .left{
+            text-align: left;
+        }
+        .right{
+            text-align: right;
+        }
+        .center{
+            text-align: center;
+        }
+
+        .heading-not{
+            text-align: center;
+        }
+
+        .heading-one{
+            text-align: left;
+        }
+
+        .heading-two{
+            text-align: right;
+        }
+
+        button{
+            border: none;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        button:active{
+            transform: scale(0.98);
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <hr class="hr1">
+    <div class="div1">
+       
+           <div class="hr2">SC-42 COMMAND MODULE</div> 
+
+        <hr class="hr1"><hr class="hr2">
+        
+            [ System Status Panel] <hr class="hr1">
+
+        <div class="system-container">
+          <div class="heading-one">System</div>
+          <div class="heading-not">|</div>
+          <div class="heading-two">Status</div>  
+        </div>
+
+        <hr class="hr1">
+
+        <div class="system-container">
+            <div class="heading-one">CPU Overload</div>
+            <div class="heading-not">|</div>
+            <div class="heading-two">67%</div>  
+         </div>
+
+        <div class="system-container">
+            <div class="heading-one">Power Reserve</div>
+            <div class="heading-not">|</div>
+            <div class="heading-two">92%</div>  
+          </div>
+
+         <div class="system-container">
+            <div class="heading-one">Sheild Integrity</div>
+            <div class="heading-not">|</div>
+            <div class="heading-two">Nominal</div>  
+         </div>
+        
+        <hr class="hr1">
+
+        [ Navigation ]
+        <ul>
+            <li>Overview</li>
+            <li>Logs</li>
+            <li>Command Input</li>
+        </ul>
+
+        <hr class="hr1"><hr class="hr1"><br>
+
+        >>>  MISSON Overview <BR> SC-42 en route to titan orbit. <br> ETA: 4 hours, 23 minutes. <br>Crew: 5 | AI: Online
+
+            <br><br> >>> SYSTEM LOGS <br> [04:12:09] > Engine initialised 
+            <br>  [04:14:13] > Navigation updated <br>
+            [04:15:10] > External scan complete
+            <br><br>
+
+            >>>Command input <br>
+
+            <textarea name="name1" id="name2" cols="30" rows="5" placeholder="Command input"></textarea><br>
+            <button>[Execute]</button>
+            
+             <br><br>
+
+                    <hr class="hr1">        <hr class="hr1">
+
+             <p style="text-align: center;">
+              END OF TRANSMISSON
+             </p>
+
+           <hr class="hr1">        <hr class="hr1">
+
+        </div>
+    
+</body>
+
+</html>
