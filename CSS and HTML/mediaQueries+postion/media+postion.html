@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Queries | Postion</title>
+
+  <style>
+
+    /* Tooltip styling: this targets .tooltip inside a button */
+    /* Absolute position places tooltip below the button */
+    /* Hidden by default using opacity + pointer-events */
+    button .tooltip {
+      position: absolute;
+      background-color: gray;
+      color: white;
+      padding-top: 5px;
+      padding-bottom: 4px;
+      padding-left: 8px;
+      padding-right: 8px;
+      border-radius: 2px;
+      font-size: 12px;
+      bottom: -40px;
+      opacity: 0;
+      transition: opacity .15s;  /* smooth fade-in */
+      pointer-events: none;     /* prevents hover flicker */
+      white-space: nowrap;      /* stops tooltip from wrapping */
+    }
+
+    /* Show tooltip on hover */
+    button:hover .tooltip {
+      opacity: 1;
+    }
+
+  </style>
+
+</head>
+<body
+style="
+padding-bottom: 3000px; /* for scroll testing */
+padding-top: 85px;      /* offset to avoid header */
+padding-left: 80px;">   <!-- space for fixed sidebar -->
+
+  <!-- Fixed header bar -->
+  <div style="
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 80px;
+    z-index: 1;
+    ">
+    header
+  </div>
+
+  <!-- Fixed sidebar on the left -->
+  <div style="
+    background-color: rgb(10, 130, 2);
+    color: white;
+    position: fixed;
+    top: 80px;  /* placed below header */
+    left: 0px;
+    bottom: 0px;
+    width: 70px;
+    ">
+    SideBar
+
+    <!-- Close button inside sidebar using absolute positioning -->
+    <div style="
+    position: absolute;
+    background-color: rgb(195, 2, 2);
+    color: white;
+    right: 0px;
+    top: 0px;
+    z-index: 2;
+    ">
+      <!-- fuck yourself bitch -->
+    </div>
+  </div>
+
+  <!-- Absolute positioned div at top-left -->
+  <div style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    left: 10px;
+    top: 10px;
+    ">
+    absolute
+  </div>
+
+  <!-- Another absolute div at top-right -->
+  <div style="
+    position: absolute;
+    background-color: red;
+    color: white;
+    right: 10px;
+    top: 60px;
+    z-index: 2;
+    ">
+    absolute
+  </div>
+  
+  <!-- Static positioned div (default) -->
+  <div style="background-color: lightblue;
+   height: 200px;
+   width: 200px;
+   position: static;
+  ">
+    Div1
+  </div>
+
+  <!-- Relative container for absolute content inside -->
+  <div style="background-color: lightpink;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    ">
+    div2
+
+    <!-- Absolute box placed relative to parent (bottom-right corner) -->
+    <div style="
+      position: absolute;
+      background-color: rgb(0, 0, 0);
+      color: white;
+      right: 10px;
+      bottom: 10px;
+      z-index: 2;
+     ">
+      5:00
+     </div>
+  </div>
+
+  <!-- Button with tooltip (positioned relative to handle tooltip absolute) -->
+  <button style=" 
+    position: relative;
+    margin-top: 30px;
+    border: none;
+    background-color: rgb(44, 86, 212);
+    color: white;
+    height: 40px;
+    width: 90px;
+    font-size: 16px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ">
+    video time 
+
+    <!-- Tooltip appears on hover; positioned below using bottom: -40px -->
+    <div class="tooltip">
+     fuck yourself motherfucker  <!-- (testing tooltip text, replace before sharing!) -->
+    </div>
+  </button>
+          <!-- fuck yourself bitch -->
+</body>
+</html>

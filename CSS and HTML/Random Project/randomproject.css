@@ -1,270 +1,412 @@
+.header{
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+  padding-left: 100px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left{
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+}
+
+.header-pfp{
+  height: 60px;
+  border-radius: 30px;
+  align-items: center;
+}
+
+.header-pfp-name{
+ font-family: arial;
+ font-weight: bold;
+ margin-left: 12px;
+}
+
+.spacing-content{
+  width: 900px;
+}
+
+.header-right{
+  display: flex;
+  top: 0;
+  padding-top: 30px;
+  align-items: center;
+  right: 0;
+}
+
+.add-friend{
+  margin-right: 20px;
+  border: none;
+  background-color: rgb(42, 86, 232);
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.add-friend:active{
+  transform: scale(.98);
+}
+
+.message{
+  margin-right: 20px;
+  border: none;
+  color: rgb(0, 0, 0);
+  background-color: rgba(152,152,152, .3);
+  font-size: 14px;
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  border-radius: 8px;
+  cursor: pointer;
+
+}
+
+.message:active{
+  transform: scale(.98);
+}
+
+body{
+  margin-top: 300px;
+}
+
+
+
+
 .project1{
-      text-align: center;
-      vertical-align: middle;
-    }
+ text-align: center;
+ vertical-align: middle;
+}
 
 
-    .cat{
-      width: 50px;
-      border-radius: 25px;
-      vertical-align: middle;
-    }
+.cat{
+width: 50px;
+border-radius: 25px;
+vertical-align: middle;
+}
 
 
-    .b1{
-      width: 250px;
-      border: none;
-      font-size: 18px;
-      vertical-align: middle;
-    }
+.b1{
+ width: 250px;
+ border: none;
+ font-size: 18px;
+ vertical-align: middle;
+}
 
 
-    .b1:active{
-      border: none;
-    }
+.b1:active{
+border: none;
+}
 
 
-    .b2{
-      border: none;
-      background-color:  rgb(29, 161, 242);
-      height: 40px;
-      width: 80px;
-      color: white;
-      font-weight: bold;
-      border-radius: 25px;
-      cursor: pointer;
-      transition: box-shadow .15s, transform 0.07s;
-    }
+.b2{
+border: none;
+background-color:  rgb(29, 161, 242);
+height: 40px;
+width: 80px;
+color: white;
+font-weight: bold;
+border-radius: 25px;
+cursor: pointer;
+transition: box-shadow .15s, transform 0.07s;
+}
 
 
-    .b2:hover{
-      box-shadow: 2px 2px 0px rgba(29, 161, 242, 0.2);
-    }
+.b2:hover{
+box-shadow: 2px 2px 0px rgba(29, 161, 242, 0.2);
+}
 
 
-    .b1:focus {
-      outline: none; /* Removes the default focus outline */
-      border: none;  /* Ensures no border appears on focus */
-    }
+.b1:focus {
+outline: none; /* Removes the default focus outline */
+border: none;  /* Ensures no border appears on focus */
+}
 
-    .b2:active{
-      background-color: rgb(26, 145, 218); /* Slightly darker blue */
-      transform: scale(.9);
-    }
+.b2:active{
+background-color: rgb(26, 145, 218); /* Slightly darker blue */
+transform: scale(.9);
+}
 
-    .google{
-      text-align: center;
-      font-family: arial;
-      margin-bottom: 300px;
-    }
+.google{
+text-align: center;
+font-family: arial;
+margin-bottom: 300px;
+}
 
-    .googleimg{
-      margin-top: 200px;
-      width: 250px;
-    }
+.googleimg{
+margin-top: 200px;
+width: 250px;
+}
 
-    .type{
-      width: 500px;
-      height: 40px;
-      box-shadow: 0px 1px 6px  rgba(32, 32, 36, .28);
-      font-size: 16px;
-      border-radius: 23px;
-      border: none;
-      padding-left: 50px;
-    }
+.type{
+ width: 500px;
+ height: 40px;
+ box-shadow: 0px 1px 6px  rgba(32, 32, 36, .28);
+ font-size: 16px;
+ border-radius: 23px;
+ border: none;
+ padding-left: 50px;
+}
 
-    .type:focus{
-      border: none;
-      outline: none;
-    }
+.type:focus{
+ border: none;
+ outline: none;
+}
 
-    .uber{
-      margin-left: 50%;
-      margin-left: 100px;
-      font-family: arial;
-    }
+.uber{
+ margin-left: 50%;
+ margin-left: 100px;
+ font-family: arial;
+}
 
-    .request{
-      font-size: 36px;
-      margin-bottom: 0px;
-    }
+.request{
+ font-size: 36px;
+ margin-bottom: 0px;
+}
 
-    .pickup{
-      margin-top: 20px;
-      height: 40px;
-      width: 350px;
-      border: none;
-      background-color: rgba(69, 69, 69, .1);
-      padding-left: 20px;
-      color: black;
-    }
+.pickup{
+ margin-top: 20px;
+ height: 40px;
+ width: 350px;
+ border: none;
+ background-color: rgba(69, 69, 69, .1);
+ padding-left: 20px;
+ color: black;
+}
 
-    .pickup:focus{
-      outline: none;
-    }
+.pickup:focus{
+ outline: none;
+}
 
-    .destination{
-      margin-top: 7px;
-      height: 40px;
-      width: 350px;
-      border: none;
-      background-color: rgba(69, 69, 69, .1);
-      padding-left: 20px;
-      color: black;
-    }
+.destination{
+ margin-top: 7px;
+ height: 40px;
+ width: 350px;
+ border: none;
+ background-color: rgba(69, 69, 69, .1);
+ padding-left: 20px;
+ color: black;
+}
 
-    .destination:focus{
-      outline: none;
-    }
+.destination:focus{
+ outline: none;
+}
 
-    .requestnow{
-      margin-top: 30px;
-      margin-bottom: 200px;
-      margin-right: 15px;
-      height: 40px;
-      width: 120px;
-      background-color: black;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+.requestnow{
+ margin-top: 30px;
+ margin-bottom: 200px;
+ margin-right: 15px;
+ height: 40px;
+ width: 120px;
+ background-color: black;
+ color: white;
+ border: none;
+ cursor: pointer;
+}
 
-    .schedule{
-      margin-top: 30px;
-      margin-bottom: 200px;
-      margin-right: 15px;
-      height: 40px;
-      width: 150px;
-      background-color: rgba(69, 69, 69, .1);
-      color: rgb(0, 0, 0);
-      border: none;
-      cursor: pointer;
-    }
+.schedule{
+ margin-top: 30px;
+ margin-bottom: 200px;
+ margin-right: 15px;
+ height: 40px;
+ width: 150px;
+ background-color: rgba(69, 69, 69, .1);
+ color: rgb(0, 0, 0);
+ border: none;
+ cursor: pointer;
+}
 
-    .main-project4{
-      text-align: center;
-      vertical-align: top;
-      margin-bottom: 300px;
-      width: 100;
-    }
+.main-project4{
+ text-align: center;
+ vertical-align: top;
+ margin-bottom: 300px;
+ width: 100;
+}
     
-    .dog1{
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 00px;
-    }
+.dog1{
+ display: inline-block;
+ vertical-align: top;
+ margin-left: 00px;
+}
 
-    .dog-one{
-      height: 60px;
-      border-radius: 30px;
-    }
+.dog-one{
+ height: 60px;
+ border-radius: 30px;
+}
 
-    .main-text{
-      font-family: arial;
-      display: inline-block;
-      margin-left: 15px;
-      text-align: left;
-      vertical-align: top;
-      line-height: 22px;
-      
-    }
+.main-text{
+ font-family: arial;
+ display: inline-block;
+ margin-left: 15px;
+ text-align: left;
+ vertical-align: top;
+ line-height: 22px;      
+}
 
-    .text{
-      font-weight: bold;
-      font-size: 18px;
-      width: auto;
-    }
+.text{
+ font-weight: bold;
+ font-size: 18px;
+ width: auto;
+}
 
-    .follow-button{
-      display: inline-block;
-      vertical-align: top;
-      margin-left: 20px;
-    }
+.follow-button{
+ display: inline-block;
+ vertical-align: top;
+ margin-left: 20px;
+}
 
-    .follow-button:active{
-      transform: scale(.98);
-    }
+.follow-button:active{
+ transform: scale(.98);
+}
 
-    .text-content {
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-      font-family: arial;
-      line-height: 22px;
-    }
+.text-content {
+ display: inline-block;
+ vertical-align: top;
+ text-align: left;
+ font-family: arial;
+ line-height: 22px;
+}
 
-    .button-content {
-      display: inline-block;
-      margin-left: 20px;
-    }
+.button-content {
+ display: inline-block;
+ margin-left: 20px;
+}
 
-    .follow-button {
-      height: 40px;
-      width: 80px;
-      margin-top: 12px;
-      border: none;
-      background-color: rgb(9, 74, 212);
-      color: white;
-      padding: 0 16px;
-      border-radius: 9px;
-      cursor: pointer;
-    }
+.follow-button {
+ height: 40px;
+ width: 80px;
+ margin-top: 12px;
+ border: none;
+ background-color: rgb(9, 74, 212);
+ color: white;
+ padding: 0 16px;
+ border-radius: 9px;
+ cursor: pointer;
+}
 
-    .normal-text{
-      color: rgb(96, 96, 96);
-    }
+.normal-text{
+ color: rgb(96, 96, 96);
+}
 
-  .oliver{
-   display: flex;
-   flex-direction: row;
-   margin-top: 12px;
-   margin-left: 500px;
-  }
+.oliver{
+ display: flex;
+ flex-direction: row;
+ margin-top: 12px;
+ margin-left: 500px;
+}
 
-  .oliver-img{
-      height: 60px;
-      border-radius: 30px; 
-      margin-right: 0px;
-  }
+.oliver-img{
+ height: 60px;
+ border-radius: 30px; 
+ margin-right: 0px;
+}
 
-  .oliver-description{
-      display: flex;
-      flex-direction: column;
-      font-family: arial;
-      margin-left: 8px;
-      width: 150px;
-  }
+.oliver-description{
+ display: flex;
+ flex-direction: column;
+ font-family: arial;
+ margin-left: 8px;
+ width: 150px;
+}
 
-  .oliver-name{
-    font-weight: bold;
-    padding-right: 0px;
-    text-align: left;
-  }
+.oliver-name{
+ font-weight: bold;
+ padding-right: 0px;
+ text-align: left;
+}
 
-  .the-dog{
-    font-size: 14px;
-    color: rgb(96, 96, 96);
-    margin-top: 6px;
-    text-align: left;
-  }
+.the-dog{
+ font-size: 14px;
+ color: rgb(96, 96, 96);
+ margin-top: 6px;
+ text-align: left;
+}
 
-  .popular{
-     font-size: 12px;
-    color: rgb(96, 96, 96);
-    margin-top: 4px;
-    text-align: left;
-  }
+.popular{
+ font-size: 12px;
+ color: rgb(96, 96, 96);
+ margin-top: 4px;
+ text-align: left;
+}
 
-  .mimi-description{
-      display: flex;
-      flex-direction: column;
-      font-family: arial;
-      margin-left: 8px;
-      width: 147px;
-  }
+.mimi-description{
+ display: flex;
+ flex-direction: column;
+ font-family: arial;
+ margin-left: 8px;
+ width: 147px;
+}
 
-  .mimi-img{
-    height: 60px;
-    border-radius: 30px; 
-    width: 60px;
-  }
+.mimi-img{
+ height: 60px;
+ border-radius: 30px; 
+ width: 60px;
+}
+
+.discord-main-container{
+ margin-left: 300px;
+ margin-top: 200px;
+ display: flex;
+ flex-direction: row;
+}
+
+.discord-pfp-container{
+ display: flex;
+ flex-direction: column;
+ background-color: rgb(32,32,32);
+ padding-right: 8px;
+ padding-left: 8px;
+ padding-top: 8px;
+ padding-bottom:100px
+}
+
+.discord-dog{
+ height: 50px;
+ border-radius: 25px;
+ margin-top: 10px;
+}
+
+.discord-info-container{
+ display: flex;
+ flex-direction: column;
+ background-color: 	rgb(48,48,48);
+ padding-top: 20px;
+ padding-left: 15px;
+ padding-right: 15px;
+ width: 200px;
+}
+
+.discord-sub-info-container{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ font-size: 16px;
+ font-family: arial;
+ color: white;
+ font-weight: 500;
+}
+
+.discord-section{
+ text-align: left;
+}
+
+.section{
+ color: white;
+ font-family: arial;
+ font-size: 16px;
+}
