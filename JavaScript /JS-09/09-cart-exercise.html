@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM | Cart Exercise</title>
+</head>
+<body>
+  <p>
+      This is cart
+    </p>
+
+    <button 
+    onclick=" console.log(`Cart Quantity: ${cartQuantity}`)"> Cart Quantity</button>
+    <button onclick="updateQuantity(1)">+1</button>
+    <button onclick="updateQuantity(2)">+2</button>
+    <button onclick="updateQuantity(4)">+4</button>
+    <button onclick="updateQuantity(5)">+5</button>
+    <button onclick="updateQuantity(-1)">-1</button>
+    <button onclick="updateQuantity(-2)">-2</button>
+    <button onclick="updateQuantity(-4)">-4</button>
+    <button onclick="updateQuantity(-5)">-5</button>
+    <button onclick="cartQuantity = 0;
+      console.log(`Cart Quantity: ${cartQuantity}`);">Reset</button>
+
+      <p class="dom-cart-quantity"></p>
+
+    <script>
+
+      
+
+      let cartQuantity = 0;
+      function updateQuantity(change){
+        newCartQuantity = cartQuantity + change
+
+        if (newCartQuantity >10 ){
+          alert('Max limit exceeding.');
+          return;
+        }
+        if (newCartQuantity < 0){
+          alert('Not enough item in the cart.');
+          return;
+        }
+
+        cartQuantity = newCartQuantity;
+        console.log(`Cart Quantity: ${cartQuantity}`);
+
+         document.querySelector('.dom-cart-quantity').textContent = `Cart Quantity: ${cartQuantity}`;
+      }
+
+      
+
+
+    </script>
+</body>
+</html>
