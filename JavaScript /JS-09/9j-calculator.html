@@ -1,0 +1,273 @@
+
+  <!DOCTYPE html>
+<html>
+  <head>
+
+
+    <style>
+  body {
+    font-family: monospace;
+    max-width: 300px;
+    margin: 30px auto;
+  }
+  #display {
+    border: 1px solid #333;
+    padding: 10px;
+    font-size: 24px;
+    height: 40px;
+    margin-bottom: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  button {
+    width: 60px;
+    height: 40px;
+    margin: 3px;
+    font-size: 18px;
+  }
+  button.operator {
+    background-color: #ddd;
+  }
+</style>
+
+
+  </head>
+  <body>
+    <!-- Code changes are at the bottom. -->
+
+    <!-- <p class="js-result"></p> 
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      ">1</button>
+
+      <button onclick="
+        updateCalculation('2');
+      ">2</button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">3</button>
+
+      <button onclick="
+        updateCalculation(' + ');
+      ">+</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">4</button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">5</button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">6</button>
+
+      <button onclick="
+        updateCalculation(' - ');
+      ">-</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">7</button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">8</button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">9</button>
+
+      <button onclick="
+        updateCalculation(' * ');
+      ">*</button>
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('0');
+      ">''</button>
+
+      <button onclick="
+        updateCalculation('.');
+      ">.</button>
+
+      <button onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+        console.log(calculation);
+        document.querySelector('.js-result').innerHTML = `${calculation}`;
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+      <button onclick="
+        updateCalculation(' / ');
+      ">/</button>
+    </p>
+
+    <p>
+      <button onclick="
+        calculation = '';
+        console.log(calculation);
+        document.querySelector('.js-result').innerHTML = `${calculation}`;
+
+        // Remember to save the calculation here.
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+    </p>
+
+    <script>
+      let calculation = localStorage.getItem('calculation') || '';
+
+      function updateCalculation(value) {
+        calculation += value;
+        console.log(calculation);
+        localStorage.setItem('calculation', calculation);
+        document.querySelector('.js-result').innerHTML = `${calculation}`;
+      }
+
+      // Optional: you can also create a function in order
+      // to reuse this code.
+      function saveCalculation() {
+        localStorage.setItem('calculation', calculation);
+      }
+    </script>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="display">0</div>
+
+    <div id="buttons">
+      <button data-value="7">7</button>
+      <button data-value="8">8</button>
+      <button data-value="9">9</button>
+      <button data-value="/" class="operator">/</button>
+
+      <button data-value="4">4</button>
+      <button data-value="5">5</button>
+      <button data-value="6">6</button>
+      <button data-value="*" class="operator">*</button>
+
+      <button data-value="1">1</button>
+      <button data-value="2">2</button>
+      <button data-value="3">3</button>
+      <button data-value="-" class="operator">-</button>
+
+      <button data-value="0">0</button>
+      <button data-value=".">.</button>
+      <button id="clear">C</button>
+      <button data-value="+" class="operator">+</button>
+
+      <button id="equals" style="width: 100%;">=</button>
+    </div>
+
+    <script>
+      (function() {
+        const display = document.getElementById('display');
+        const buttons = document.getElementById('buttons');
+        let expression = '';
+
+        // Regex for allowed characters (digits, operators, dot)
+        const validExpression = /^[0-9+\-*/.() ]*$/;
+
+        function updateDisplay() {
+          display.textContent = expression || '0';
+        }
+
+        function appendValue(value) {
+          // Prevent multiple operators in a row
+          if (/[+\-*/]/.test(value)) {
+            if (expression === '' && value !== '-') return; // can't start with operator except minus
+
+            if (/[+\-*/]$/.test(expression)) {
+              // Replace last operator with new one
+              expression = expression.slice(0, -1);
+            }
+          }
+
+          // Prevent multiple dots in a number segment
+          if (value === '.') {
+            const parts = expression.split(/[+\-*/]/);
+            const lastPart = parts[parts.length - 1];
+            if (lastPart.includes('.')) return;
+            if (lastPart === '') value = '0.'; // if dot after operator, prepend zero
+          }
+
+          expression += value;
+          updateDisplay();
+        }
+
+        function clearExpression() {
+          expression = '';
+          updateDisplay();
+        }
+
+        function calculate() {
+          if (!validExpression.test(expression)) {
+            display.textContent = 'Error: Invalid chars';
+            return;
+          }
+
+          try {
+            // Use Function constructor instead of eval (still needs care)
+            const result = Function('"use strict";return (' + expression + ')')();
+            expression = result.toString();
+            updateDisplay();
+          } catch {
+            display.textContent = 'Error: Invalid expr';
+            expression = '';
+          }
+        }
+
+        buttons.addEventListener('click', e => {
+          if (!e.target.matches('button')) return;
+
+          const val = e.target.dataset.value;
+          if (val !== undefined) {
+            appendValue(val);
+          } else if (e.target.id === 'clear') {
+            clearExpression();
+          } else if (e.target.id === 'equals') {
+            calculate();
+          }
+        });
+
+        updateDisplay();
+      })();
+    </script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
+
+</body>
+</html>
