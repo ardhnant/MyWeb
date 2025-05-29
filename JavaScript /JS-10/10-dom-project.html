@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM | Projects</title>
+  <style>
+    body{
+      padding-bottom: 500px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .js-button-subscribe{
+      border: none;
+      background-color: black;
+      color: white;
+      height: 36px;
+      width: 100px;
+      border-radius: 18px;
+      font-weight: bold;
+
+    }
+
+    .is-subscribed{
+      background-color: rgb(240, 240, 240);
+      color: black;
+    }
+
+    .calculate-button{
+      border: none;
+      background-color: green;
+      color: white;
+      padding: 10px 10px 10px 10px;
+    }
+
+    .js-cost-input{
+      height: 32px;
+      width: 225px;
+    }
+
+  </style>
+</head>
+<body>
+  <div>
+    <p>
+    YouTube Subscribe Button
+  </p>
+    <button onclick="subscribe()" class="js-button-subscribe">
+      Subscribe
+    </button>
+  </div>
+  <br><br><br><br>
+  <div>
+    <p>Amazon Shipping Calculator</p>
+    <p> Orders under $40 = +$10 shipping.</p>
+    <p> Orders over $40 = FREE shipping. </p>
+    <input class="js-cost-input" placeholder="Cost of order" onkeydown="handleCostKeyDown(event)">
+    <button onclick="calculate()" class="calculate-button">
+      Calculate
+    </button>
+    <p class="after-cost"></p>
+  </div>
+
+  <div>
+    <input type="text" class="js-keyup" placeholder="Click here, then press and release a key." onkeyup="showKey(event)" size="40">
+     <p id="output"></p>
+  </div>
+  
+  <script>
+
+    function showKey(event){
+      document.getElementById("output").innerText = `Your text: ${event.target.value}`;
+    }
+
+    function handleCostKeyDown(event){
+      if( event.key === 'Enter'){
+        calculate();
+      }
+    }
+
+    function calculate(){
+      let cost = Number(document.querySelector('.js-cost-input').value);
+
+      if (cost <= 40){
+        cost = ((cost*100) + 1000)/100;
+      } else if (!cost){
+        alert("Enter a valid number, Genius.");
+        return
+      }
+      document.querySelector('.after-cost').innerHTML = `$${cost}`;
+    }
+
+    function subscribe(){
+      const buttonElement = document.querySelector('.js-button-subscribe');
+      if ( buttonElement.innerText === 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed';
+        buttonElement.classList.add('is-subscribed');
+      } else {
+        buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
+      }
+      console.log('dekh bhencho chalne lga.....mera yashu yashu mera yashu yashu');
+    }
+  </script>
+</body>
+</html>
