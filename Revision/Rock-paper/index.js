@@ -74,10 +74,10 @@ function reset(){
   document.querySelector('#score').innerText = `Win: ${score.win} Lose: ${score.lose} Tie: ${score.tie}`;
 }
 
-// function reset(){
-//   score.win = 0;
-//   score.lose = 0;
-//   score.tie = 0;
+function reset(){
+  score.win = 0;
+  score.lose = 0;
+  score.tie = 0;
 
-//   document.querySelector('#score').innerText = `Win: ${score.win} Lose: ${score.lose} Tie: ${score.tie}`;
-// }
+  document.querySelector('#score').innerText = `Win: ${score.win} Lose: ${score.lose} Tie: ${score.tie}`;
+}
