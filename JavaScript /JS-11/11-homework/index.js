@@ -43,10 +43,21 @@
 // console.log(minMax([3]));
 // console.log(minMax([]));
 
-myArray = ['apple', 'grape', 'apple', 'apple'];
+function wordCount(words) {
+  const myArray = {};
 
-let wordCount = 0
+  for (let i = 0; i < words.length; i++){
+    const word = words[i];
 
-for (let i = 1; i < myArray.length; i++){
-  if (myArray[i] === )
+    if (!myArray[word]){
+      myArray[word] = 1;
+    } else {
+      myArray[word]++;
+    }
+  }
+  return myArray;
 }
+
+console.log(wordCount(['apple', 'grape', 'apple', 'apple']));
+
+

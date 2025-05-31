@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Measurer</title>
+  <style>
+    body{
+      background-color: hsl(0, 0%, 15%);
+      align-items: center;
+      padding: 200px;
+      color: white;
+    }
+
+    div{
+      width: 100px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    p{
+      width: 500px;
+    }
+
+    button{
+      background-color: hsl(0, 0%, 45%);
+      border: none;
+      height: 50px;
+      width: 50px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    #show-cart{
+      width: auto;
+    }
+
+    #reset{
+      margin-top: 10px;
+    width: 170px;
+    }
+  </style>
+</head>
+<body>
+  <p><button id="show-cart" onclick="showCartQuantity()">Show Cart Quantity</button></p>
+  <p class="show-cart-quantity"></p>
+  <div>
+    <button onclick="addToCart(2)">+2</button>
+    <button onclick="addToCart(3)">+3</button>
+    <button onclick="addToCart(5)">+5</button>
+    <button onclick="addToCart(-2)">-2</button>
+    <button onclick="addToCart(-3)">-3</button>
+    <button onclick="addToCart(-5)">-5</button>
+  </div>
+  <button id="reset" onclick="reset()">Reset</button>
+  <script src="index.js"></script>
+</body>
+</html>
