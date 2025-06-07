@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Rock Paper Scissor</title>
+</head>
+<body>
+  <div class="whole-game">
+    <p>
+      Rock Paper Scissor
+    </p>
+    <div id="images">
+      <img src="rock.png" id="rock">
+      <img src="paper.png" id="paper">
+      <img src="scissors.png" id="scissors">
+    </div>
+
+    <div>
+      <p id="result"></p>
+      <p id="moves"></p>
+      <p id="score"></p>
+    </div>
+
+    <button onclick="reset()">Reset Score</button>
+    <button id="auto-btn">Auto</button>
+
+  </div>
+ 
+  <div class="confirm-reset">
+    <p>
+      Are you sure you want to reset the score? 
+      <button id="reset-yes">Yes</button> 
+      <button id="reset-no">No</button>
+    </p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

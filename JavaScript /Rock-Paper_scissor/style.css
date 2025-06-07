@@ -1,0 +1,39 @@
+body{
+  background-color: hsl(0, 0%, 8%);
+  padding-left: 30px;
+}
+
+p {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#images{
+  display: flex;
+  gap: 15px;
+}
+
+img{
+  height: 50px;
+  padding: 30px;
+  border: 4px solid white;
+  border-radius: 100px;
+}
+
+button{
+margin-top: 25px;
+padding: 10px;
+}
+
+#dumb-img{
+  border: none;
+  padding: 0px;
+}
+
+#score{
+  font-size: 20px;
+}
+.confirm-reset{
+  display: none;
+}
